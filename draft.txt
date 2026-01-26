@@ -1,0 +1,9 @@
+使用OpenAI SDK，完成并发调用LLM API（包括但不限于gpt-4o, deepseek r1, doubao系列LLM）的整体框架，要求：
+1. 按照“读取输入-预处理-调用LLM-后处理-保存输出”的流程完成该任务。
+2. 输入为命令行参数，使用argparse管理，你需要列举必要的命令行参数，包括：待处理的文件（）
+3. 
+
+使用python，将存储数据的jsonl文件转换为可用于输入LLM的格式，每一行追加到原有jsonl中，键值为"message"。注意：
+1. 由于LLM提示词未明确，你可以使用get_user_pe(item)获取user提示词，使用get_system_pe(item)获取system提示词，其中item未jsonl每一行。这两个函数细节无需实现，使用pass替代即可，便于后续修改。
+2.将可用于输入给LLM的内容追加到原始jsonl文件中，键值为"message"，要求后续可直接使用item["message"]的内容输入给LLM，而无需再进行修改。
+3. 输入和输出的文件目录以命令行的形式给出，使用argparse管理。

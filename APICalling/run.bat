@@ -1,0 +1,1 @@
+python APICalling/apicalling.py --input_file "APICalling/test.jsonl" --output_file "APICalling/test_output.jsonl" --api_key xxx --model_name deepseek-chat --base_url https://api.deepseek.com
