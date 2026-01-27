@@ -1,8 +1,6 @@
 import concurrent.futures
 import time
 from typing import List, Dict, Any
-
-# 调用DeepSeekV3进行反事实文本改写
 from tqdm import tqdm
 import random
 from openai import OpenAI
@@ -81,7 +79,7 @@ def process_list_with_threadpool(args, input_list: List[Any]) -> List[Dict]:
     # 按原始索引排序
     return results
 
-###需要自己修改###
+### You may need to modify the code here
 def get_pe(item):
     return f'''你是一个数学专家，你擅长做数学计算。请你计算以下公式，并使用"[]"包裹答案。示例：
 问题：5+7=? 
